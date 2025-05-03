@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>موقع المجهول</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://www.example.com/your-image.jpg') no-repeat center center fixed; /* ضع رابط الصورة هنا */
+            background-size: cover;
+            color: #333;
+            overflow: hidden;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8); /* خلفية شفافة لزيادة وضوح النص */
+            border-radius: 10px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .message-box, .register-box {
+            margin: 20px 0;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+        }
+        .message-input, .register-input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .message-list {
+            list-style: none;
+            padding: 0;
+        }
+        .message-item {
+            background-color: #fff;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+        .footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- صفحة الترحيب -->
+    <h1>أهلاً بك في موقع المجهول</h1>
+    <p>مرحباً بك في موقع المجهول حيث يمكنك إرسال رسائل مجهولة الهوية. قم بإنشاء حسابك وابدأ في التفاعل الآن!</p>
+
+    <!-- نموذج إنشاء الحساب -->
+    <div class="register-box">
+        <h2>إنشاء حساب جديد:</h2>
+        <form action="register.php" method="post" enctype="multipart/form-data">
+            <!-- حقل إدخال اسم المستخدم -->
+            <input type="text" name="username" class="register-input" placeholder="اسم المستخدم" required>
+
+            <!-- حقل إدخال البريد الإلكتروني -->
+            <input type="email" name="email" class="register-input" placeholder="البريد الإلكتروني" required>
+
+            <!-- حقل إدخال رقم الهاتف -->
+            <input type="text" name="phone" class="register-input" placeholder="رقم الهاتف" required>
+
+            <!-- حقل رفع الصورة -->
+            <label for="profile-image">اختر صورة لحسابك:</label>
+            <input type="file" name="profile-image" class="register-input" accept="image/*" required>
+
+            <!-- التسجيل باستخدام الفيس بوك (سيحتاج إلى تكامل مع Facebook SDK) -->
+            <button type="button" onclick="facebookLogin()">تسجيل الدخول عبر الفيس بوك</button>
+
+            <!-- زر إرسال البيانات -->
+            <button type="submit">إنشاء الحساب</button>
+        </form>
+    </div>
+
+    <!-- عرض الرسائل للمستخدم -->
+    <h2>الرسائل المرسلة:</h2>
+    <ul class="message-list">
+        <li class="message-item">رسالة: مرحبا، كيف حالك؟</li>
+        <li class="message-item">رسالة: أحب ما تقدمه!</li>
+        <!-- الرسائل الأخرى تظهر هنا -->
+    </ul>
+
+    <!-- نموذج إرسال رسالة جديدة -->
+    <div class="message-box">
+        <h2>أرسل رسالة جديدة:</h2>
+        <form action="submit_message.php" method="post">
+            <textarea class="message-input" name="message" rows="4" placeholder="اكتب رسالتك هنا..."></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+    </div>
+
+    <!-- عرض عدد الرسائل -->
+    <p>عدد الرسائل المرسلة: 2</p>
+</div>
+
+<!-- إضافة في الأسفل اسم Mohamed Kamal و رابط تيليجرام -->
+<div class="footer">
+    <p>Mohamed Kamal | للتواصل مع المطور: <a href="https://t.me/t_n_1g" target="_blank">@t_n_1g</a></p>
+</div>
+
+<!-- سكربت تكامل فيس بوك (يجب أن تضيف Facebook SDK في صفحتك) -->
+<script>
+    function facebookLogin() {
+        // سيتم إضافة الكود لتسجيل الدخول عبر الفيس بوك هنا
+        alert('تسجيل الدخول عبر الفيس بوك سيتم إضافته قريبًا!');
+    }
+</script>
+
+</body>
+</html>
